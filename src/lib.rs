@@ -9,6 +9,12 @@ impl ShenXingContext {
     }
 }
 
+impl Default for ShenXingContext {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 pub type ReplCallBacks = CallBackMap<ShenXingContext, reedline_repl_rs::Error>;
 
 pub fn func() -> ReplCallBacks {
